@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 from pathlib import Path
@@ -17,5 +16,4 @@ time = pd.read_csv(data_dir / "time.csv", header=None).to_numpy()[:, 0]
 for run in range(10):
     crm = CRM(tau_selection=TAU_SELECTION, constraints=CONSTRAINTS)
     crm.fit(prod, inj, time, num_cores=NUM_CORES, random=True)
-    crm.to_pickle(Path("/results") / f"crm_results_{run}.pkl")
-
+    crm.to_pickle(Path(__file__).parent / "results" / f"crm_results_{run+1}.pkl")

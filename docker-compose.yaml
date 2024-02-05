@@ -3,8 +3,7 @@ services:
     build: .
     volumes:
       - ./data:/data:ro
-      - results:/results
-    command: python /root/run_crm.py
+      - results:/home/pywaterflood/results:rw
 volumes:
   results:
 
