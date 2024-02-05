@@ -12,7 +12,7 @@ repos:
       - id: dockerfilelint
         stages: [commit]
   - repo: https://github.com/iamthefij/docker-pre-commit
-    rev: master
+    rev: v3.0.1
     hooks:
       - id: docker-compose-check
   - repo: https://github.com/astral-sh/ruff-pre-commit
