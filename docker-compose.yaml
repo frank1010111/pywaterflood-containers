@@ -1,0 +1,10 @@
+services:
+  pywaterflood:
+    build: .
+    volumes:
+      - ./data:/data:ro
+      - results:/results
+    command: python /root/run_crm.py
+volumes:
+  results:
+
